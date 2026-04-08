@@ -1,0 +1,175 @@
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+}
+
+/* สไตล์กล่อง Login แบบกระจกฝ้า (Glassmorphism) */
+.login-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.lang-switch {
+    text-align: right;
+    margin-bottom: 20px;
+    color: #00ff04;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: #00ff04;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lang-switch button:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00ff04;
+}
+
+h2 {
+    color: #00ff04;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* จัดการช่อง Input */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #00ff04;
+    outline: none;
+    color: #00ff04;
+    transition: 0.3s;
+}
+
+/* เอฟเฟกต์ Label ลอยขึ้นเมื่อมีการคลิก */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #00ff04;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -15px;
+    color: #fff;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* ปุ่ม Login */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #00ff04;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* สไตล์กล่องรหัสผ่าน */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    /* เว้นที่ด้านขวาไว้ให้ Icon */
+    padding-right: 30px !important; 
+}
+
+#togglePassword {
+    position: absolute;
+    right: 0;
+    bottom: 10px; /* ปรับให้ตรงกับขีดเส้นใต้ */
+    color: #00ff04; /* สีเขียว Matrix */
+    cursor: pointer;
+    font-size: 10px !important;
+    transition: 0.3s;
+    /* จัดการ pointer-events เพื่อให้ label ยังทำงานได้เวลาคลิกโดนใกล้ๆ icon */
+    z-index: 1; 
+}
+
+#togglePassword {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    width: px; /* กำหนดความกว้างของ Icon */
+    height: auto;
+    cursor: pointer;
+    opacity: 0.7; /* ทำให้ดูจางๆ เข้ากับธีม */
+    transition: 0.3s;
+}
+
+#togglePassword:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.i {
+    color: #00ff04;
+    font-size: 5px;
+}
+
+.login-btn:hover {
+    background: #00ff0418;
+    color: #00ff04;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a, .footer-links span {
+    color: #00ff04;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
