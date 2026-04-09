@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครสมาชิก</title>
     <link rel="stylesheet" href="..\..\static\css\login.css">
 </head>
+
 <body>
     <div class="container">
         <form class="login-form">
-            <h2>
-                < สมัครสมาชิก >
+            <div class="lang-switch">
+                <button onclick="changeLanguage('th')">TH</button>&ensp;|&ensp;
+                <button onclick="changeLanguage('en')">EN</button>&ensp;|&ensp;
+                <button onclick="changeLanguage('中文')">中文</button>
+            </div>
+            <h2  class="lang" data-key="register_title">
+                < สมัครสมาชิก>
             </h2>
             <!-- ฟอร์มสมัครสมาชิก -->
+            <div class="input-group">
+                <input type="text" id="username" required>
+                <label for="username" class="lang" data-key="user_label">ชื่อผู้ใช้งาน</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email" class="lang" data-key="email_label">อีเมล</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label for="password" class="lang" data-key="pass_label">รหัสผ่าน</label>
+            </div>
+            <button type="submit" class="login-btn lang" data-key="register_btn">สมัครสมาชิก</button>
+            <div class="footer-links">
+                <a href="../../templates/accounts/login.html" class="lang" data-key="login_link">กลับไปหน้าเข้าสู่ระบบ</a>
+            </div>
         </form>
     </div>
 </body>
+<script src="../../static/js/language.js"></script>
 </html>
